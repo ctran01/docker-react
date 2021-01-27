@@ -4,7 +4,6 @@ services:
 
 before_install:
   - docker build -t chrismtran/docker-react -f Dockerfile.dev .
-  - docker run chrismtran/docker-react -p 3000:3000
 
 script:
   - docker run -e CI=true chrismtran/docker-react npm run test
